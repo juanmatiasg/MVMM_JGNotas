@@ -1,5 +1,6 @@
 package com.example.notas.ui
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -35,6 +36,7 @@ class NotasAdapter : RecyclerView.Adapter<ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.description.setText(listaNotas.get(position).description)
         holder.imageView.loadUrl(listaNotas.get(position).image)
+
     }
 
     fun ImageView.loadUrl(url: String) {
@@ -45,6 +47,9 @@ class NotasAdapter : RecyclerView.Adapter<ViewHolder>() {
         listaNotas = lista
         notifyDataSetChanged()
     }
+
+
+
 
 
 

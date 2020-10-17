@@ -7,9 +7,12 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.crearnotas.CrearNotasActivity
 import com.example.notas.R
 import com.example.notas.viewmodel.NotasViewModel
+
 import kotlinx.android.synthetic.main.activity_ver_notas.*
+import kotlinx.android.synthetic.main.notas_items.*
 
 class VerNotasActivity : AppCompatActivity() {
 
@@ -46,9 +49,12 @@ class VerNotasActivity : AppCompatActivity() {
             madapter.setearLista(it)
         })
 
-
-
-
+       /* viewModel.getNotasList().observe(this, Observer {
+            val bundle:Bundle? = intent.extras
+            val texto = bundle!!.getString(CrearNotasActivity.DESCRIPTION).toString()
+            description.text = texto
+            madapter.setearLista(it)
+        })*/
 
 
     }
